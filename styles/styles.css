@@ -1,50 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-primary: darkblue;
+    --color-light: white;
+    --color-dark: #333;
+    --color-border: black;
+    --color-shadow: gray;
+    --colo-bg-light: #eee;
+    --color-accent: steelblue;
+
+    --img-width-main: 150px;
+    --img-width-aside: 200px;
+
+    --space-xs: 2px;
+    --space-s: 10px;
+    --space-m: 20px;
+    --space-l: 1em;
+
+    -border-thin: 1px solid var(--color-border);
+}
 main {
     max-width: 840px
 }
 nav {
-    background-color: darkblue;
-    padding: 10px;
+    background-color: var(--color-primary);
+    padding: var(--space-m);
 }
 nav a {
-    color: white;
+    color: var(--color-light);
     display: block;
-    padding: 20px;
+    padding: var(--space-m);
 }
 h1 {
-    color: darkblue;
+    color: var(--color-primary);
 }
 img {
-    width: 150px;
+    width: var(--img-width-main);
     height: auto;
-    border: 1px solid black;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: var(--border-thin);
+    padding: var(--space-xs);
+    box-shadow: 0 0 30px var(--color-shadow);
 }
 p {
-    padding: 10px
+    padding: var(--space-s);
 }
 aside {
     width: 20em;
-    margin: 1em;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    padding: 1em;
-    background-color: #eee;
-    color: #333;
     text-align: center;
+}
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
 }
 
 aside img {
-    width: 200px;
+    width: var(--color-dark);
     height: auto;
-    border: 1px solid ;
+    border: var(--border-thin);
 }
 
 main img {
-    width: 150px;
+    width: var(--img-width-main);
     height: auto;
-    border: 1px solid steelblue;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    border: 1px solid var(--color-accent);
+    padding: var(--space-xs);
+    box-shadow: 0 0 30px var(--color-shadow);
+    float: right;
 }
 
 p {
@@ -53,6 +78,15 @@ p {
 
 footer {
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: var(--border-thin);
     text-align: center;
+}
+
+/* Class Selectors */
+.box{
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
