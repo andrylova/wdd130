@@ -1,0 +1,16 @@
+:root{
+    --primary-color: #0b6e4f;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+
+    --radius
+}
+header{
+    background: linear-gradient(90deg, var(--primary-color), var(--accent1-color));
+    color: white;
+    padding: calc(var(--));
+}
