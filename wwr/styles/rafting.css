@@ -10,7 +10,70 @@
     --radius
 }
 header{
-    background: linear-gradient(90deg, var(--primary-color), var(--accent1-color));
+    background-color: var(--primary-color);
     color: white;
-    padding: calc(var(--));
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+header, main, footer{
+    width: 840px;
+    margin: 0 auto;
+}
+h1, h2{
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+nav, p, section, article{
+    margin: 16px;
+    padding: 8px;
+}
+.socialmedia a{
+    text-decoration: none;
+}
+.hero{
+    position: relative;
+}
+.hero img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+h1{
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #ffffff;
+}
+.hero article img{
+    float: right;
+    width: 125px;
+    margin: 0 0 1rem 1rem;
+    border: 3px solid var(--accent1-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+footer{
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+footer .socialmedia a img{
+    width: 40px;
+    margin: 0 0.5rem;
+    filter: brightness(0) invert(1);
+}
+footer .socialmedia a:hover img{
+    filter: brightness(1);
 }
