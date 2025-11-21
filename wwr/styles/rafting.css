@@ -57,10 +57,10 @@ nav a.active {
 
 .hero {
     position: relative;
-    width: 100%;
 }
 
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
 }
@@ -70,32 +70,29 @@ nav a.active {
     top: 20px;
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
-    background-color: rgba(38, 70, 83, 0.8);
-    color: var(--text-color);
-    font-family: var(--heading-font);
-    font-size: 2rem;
-}
-
-.hero-text {
-    position: relative;
+    padding: 1rem;
     background-color: rgba(38, 70, 83, 0.7);
     color: #ffffff;
+    font-family: var(--heading-font);
+}
+.hero article{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(38, 70, 83, 0.75);
+    color: #ffffff;
     padding: 1rem;
-    margin: -80px 20px 20px 20px;
     border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    overflow: hidden;
 }
-
-.hero-small-img {
-    width: 100px;
+.hero article img{
+    float: right;
+    width: 125px;
+    margin-left: 1rem;
+    border: 3px solid var(--accent-color);
     border-radius: var(--radius);
-    border: 2px solid var(--text-color);
 }
-
 main {
     max-width: 840px;
     margin: 2rem auto;
