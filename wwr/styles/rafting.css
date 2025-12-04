@@ -170,13 +170,14 @@ footer {
 }
 
 footer .socialmedia a img {
-    width: 40px;
+    width: 36px;
     margin: 0 0.5rem;
-    filter: brightness(0) invert(1);
+    display: inline-block;
+    vertical-align: middle;
 }
 
 footer .socialmedia a:hover img {
-    filter: brightness(1);
+   transform: translateY(-3px);
 }
 
 /* RESPONSIVE */
