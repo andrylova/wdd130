@@ -9,9 +9,9 @@ body {
     background-color: rgb(255 252 249);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;          
-    justify-content: center;     
-    align-items: center;         
+    min-height: 100vh; /* make full height for vertical centering */
+    justify-content: center; /* center main vertically */
+    align-items: center;     /* center horizontally */
 }
 
 header, footer {
@@ -22,7 +22,7 @@ header, footer {
 
 main {
     max-width: 500px;
-    width: 90%;                 
+    width: 90%; /* responsive */
     background-color: #555;
     color: #fff;
     padding: 20px;
@@ -35,41 +35,24 @@ h1 {
 }
 
 form {
-    width: 100%;
-    max-width: 600px;
+    max-width: 100%;
     border: 2px solid #9494948f;
     padding: 30px;
     border-radius: 5px;
     background-color: #ddd;
     color: #111;
-    display: flex;               
+    display: flex;             /* changed from grid to flex for centering */
     flex-direction: column;
     gap: 15px;
-    align-items: center;        
-}
-
-.quiz-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;         
-    width: 100%;
-}
-
-.quiz-item label {
-    text-align: left;            
-    width: 100%;                 
-    word-wrap: break-word;       
-    margin-bottom: 5px;
+    align-items: center;       /* center inputs inside form */
 }
 
 input, textarea, select {
-    width: 100%;                 
-    max-width: 400px;            
     padding: 10px;
     border-radius: 5px;
     border: 2px solid #9494948f;
-    box-sizing: border-box;
-    text-align: left;            
+    width: 80%;               /* center-aligned width */
+    text-align: center;        /* input text centered */
 }
 
 button {
@@ -90,13 +73,11 @@ button:hover {
 
 code {
     display: block;
-    background-color: #333;      
+    background-color: #333;   /* changed to dark for contrast */
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     margin: 5px 0;
-    white-space: pre-wrap;       
-    word-wrap: break-word;
 }
 
 .box {
@@ -105,9 +86,9 @@ code {
     padding: 1rem;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
+.quiz-item {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* center labels & inputs inside quiz-item */
 }
