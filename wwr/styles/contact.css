@@ -1,0 +1,336 @@
+
+:root {
+    --primary-color: #0b3d91;
+    --secondary-color: #f4a261;
+    --accent-color: #264653;
+    --text-color: #ffffff;
+
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+
+    --radius: 6px;
+    --max-width: 1000px;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent-color);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* HEADER with GRID layout */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+header .logo {
+    width: 120px;
+}
+
+/* NAV uses FLEX */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+nav a.active {
+    text-decoration: underline;
+    background-color: rgba(255,255,255,0.08);
+}
+
+/* Main layout */
+main {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Page intro */
+.page-intro {
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+.page-intro h1 {
+    font-family: var(--heading-font);
+    color: var(--accent-color);
+    margin-bottom: 0.35rem;
+    font-size: 2rem;
+}
+
+.lead {
+    color: #333;
+}
+
+/* Contact grid: left (info+map) and right (form) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+/* Left column */
+.contact-info {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+.contact-info h2 {
+    margin-bottom: 0.5rem;
+    font-family: var(--heading-font);
+}
+
+.company-address,
+.company-contact {
+    margin: 0.5rem 0 1rem 0;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.company-contact a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Map wrapper & iframe styling (removed inline style in HTML) */
+.map-wrapper {
+    background: #fff;
+    padding: 0.25rem;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 3px solid rgba(0,0,0,0.06);
+}
+
+.map-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0; /* style removed from HTML and handled here */
+}
+
+/* Right column (form) */
+.contact-form-wrapper {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.contact-form-wrapper h2 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-family: var(--heading-font);
+}
+
+.contact-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+/* Form rows */
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-row label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row textarea {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.12);
+    font-size: 1rem;
+    font-family: var(--body-font);
+}
+
+.form-row textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+/* Radios */
+fieldset.radios {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.radios legend {
+    font-weight: bold;
+    margin-bottom: 0.35rem;
+    color: #333;
+}
+
+.radio-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.35rem;
+}
+
+.radio-row input[type="radio"] {
+    transform: scale(1.05);
+}
+
+/* Checkbox row */
+.checkbox-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.checkbox-row input[type="checkbox"] {
+    transform: scale(1.05);
+}
+
+/* Submit button */
+.btn-submit {
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    background: var(--secondary-color);
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    width: 100%;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Employee profiles */
+.employees {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.employees h2 {
+    color: var(--accent-color);
+    font-family: var(--heading-font);
+    margin-bottom: 0.25rem;
+}
+
+.employee-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.employee-card {
+    background: #fff;
+    padding: 0.6rem;
+    border-radius: var(--radius);
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.employee-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 0.6rem;
+}
+
+.employee-card figcaption {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Social icons: removed the brightness/invert filters that hid white icons */
+footer .socialmedia a img {
+    width: 36px;
+    margin: 0 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer .socialmedia a:hover img {
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .employee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper iframe {
+        height: 220px;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Rapids! — address, phone, email, staff profiles, and a contact form to get in touch or subscribe to our monthly newsletter." />
+    <title>Contact Us — Rapids!</title>
+    <meta name="author" content="RATSIATOSIKA Lovamampionona Andry" />
+    <link rel="stylesheet" href="styles/contact.css" />
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="images/rafting_logo.png" alt="Rapids! logo" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <h1>Contact Us</h1>
+            <p class="lead">Questions about booking, our website, or our trips? Reach out — we’re happy to help.</p>
+        </section>
+
+        <section class="contact-grid">
+            <!-- Company info + map -->
+            <div class="contact-info" aria-labelledby="company-info-heading">
+                <h2 id="company-info-heading">Company Information</h2>
+
+                <address class="company-address">
+                    <strong>Rapids!</strong><br>
+                    Ankaditany, Ampitatafika<br>
+                    Lot CAV208<br>
+                </address>
+
+                <p class="company-contact">
+                    Phone: <a href="tel:+261381162226">+261 38 116 2226</a><br>
+                    Email: <a href="mailto:lovamampiononaofjc@gmail.com">lovamampiononaofjc@gmail.com</a>
+                </p>
+
+                <div class="map-wrapper" aria-hidden="false">
+                    <iframe
+                        title="Rapids! location map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d793.3074036844656!2d47.470213792009226!3d-18.94788689893717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f07f0008782c93%3A0x25a92457e5abe71!2sTsarahasina!5e0!3m2!1sfr!2smg!4v1764721834290!5m2!1sfr!2smg"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+            <!-- Contact form -->
+            <aside class="contact-form-wrapper" aria-labelledby="form-heading">
+                <h2 id="form-heading">Send Us a Message</h2>
+
+                <form class="contact-form" action="#" method="post" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <fieldset class="form-row radios">
+                        <legend>Message Purpose</legend>
+
+                        <div class="radio-row">
+                            <input type="radio" id="purpose-general" name="purpose" value="general" required>
+                            <label for="purpose-general">General Inquiry</label>
+                        </div>
+
+                        <div class="radio-row">
+                            <input type="radio" id="purpose-reservation" name="purpose" value="reservation">
+                            <label for="purpose-reservation">Reservation Question</label>
+                        </div>
+
+                        <div class="radio-row">
+                            <input type="radio" id="purpose-website" name="purpose" value="website">
+                            <label for="purpose-website">Website Suggestion</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                    </div>
+
+                    <div class="form-row checkbox-row">
+                        <input id="newsletter" name="newsletter" type="checkbox" value="subscribe">
+                        <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit" class="btn-submit">Get in Touch</button>
+                    </div>
+                </form>
+            </aside>
+        </section>
+
+        <!-- Employee Profiles -->
+        <section class="employees" aria-labelledby="employees-heading">
+            <h2 id="employees-heading">Meet Our Team</h2>
+            <p class="small">Our guides and staff are experienced, friendly, and safety-certified.</p>
+
+            <div class="employee-grid">
+                <figure class="employee-card">
+                    <img src="images/profile.jpg" alt="Photo of Andry — Owner / Head Guide">
+                    <figcaption>
+                        <strong>Andry Ratsiat</strong><br>
+                        Owner / Head Guide
+                    </figcaption>
+                </figure>
+
+                <figure class="employee-card">
+                    <img src="images/employee_1.jpg" alt="Photo of Rakoto — Operations Manager">
+                    <figcaption>
+                        <strong>Rakoto</strong><br>
+                        Operations Manager
+                    </figcaption>
+                </figure>
+
+                <figure class="employee-card">
+                    <img src="images/employee_3.jpg" alt="Photo of Fanja — Lead Safety Instructor">
+                    <figcaption>
+                        <strong>Fanja R.</strong><br>
+                        Lead Safety Instructor
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2025 Rapids! | RATSIATOSIKA Andry</p>
+        <nav class="socialmedia" aria-label="Social media links">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook Icon"></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram Icon"></a>
+        </nav>
+    </footer>
+</body>
+</html>
